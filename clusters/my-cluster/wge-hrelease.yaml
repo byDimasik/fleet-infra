@@ -20,6 +20,9 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    extraEnvVars:
+      - name: WEAVE_GITOPS_FEATURE_OIDC_BUTTON_LABEL
+        value: "Login with Okta"
     cluster-controller:
       controllerManager:
         manager:
