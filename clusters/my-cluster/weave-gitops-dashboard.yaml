@@ -38,4 +38,6 @@ spec:
       create: true
       passwordHash: $2a$10$PnR2quNhDb2rgS0BnQ0mgeNVrzE3BCmW3yp2JPTMoC/acB/sWyHRS
       username: admin
-
+    extraEnvVars:
+      - name: WEAVE_GITOPS_FEATURE_OIDC_BUTTON_LABEL
+        value: "Login with Okta"
