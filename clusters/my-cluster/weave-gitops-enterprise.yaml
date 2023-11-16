@@ -31,9 +31,9 @@ spec:
   interval: 50m
   values:
     # -- Configure TLS settings if needed
-    # tls:
+    tls:
       # -- Can be disabled if TLS is handled by a user-provided ingress controller
-      # enabled: true
+       enabled: true
       # -- optionally specify a TLS secret
       # secretName: null
     config:
@@ -41,7 +41,7 @@ spec:
         repositoryURL: https://github.com/$GITHUB_USER/fleet-infra
         # -- Can be changed depending on your git repo structure
         # repositoryPath: ./clusters/management/clusters
-        # repositoryClustersPath: ./cluster
+        repositoryClustersPath: ./clusters
       git:
         type: github
         # -- Change if using on-prem github/gitlab
