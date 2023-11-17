@@ -47,8 +47,8 @@ spec:
     global: {}
     service:
       port: 8000
-    additionalArgs:
-      - --route-prefix=/ww
+#    additionalArgs:
+#      - --route-prefix=/ww
     ingress:
       enabled: true
       hosts:
