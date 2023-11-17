@@ -15,19 +15,19 @@ spec:
           clusterRef:
             kind: GitopsCluster
             name: demo-01
-            namespace: flux-system
+            namespace: default
     - name: test
       targets:
         - namespace: podinfo-02-qa
           clusterRef:
             kind: GitopsCluster
             name: demo-01
-            namespace: flux-system
+            namespace: default
         - namespace: podinfo-02-perf
           clusterRef:
             kind: GitopsCluster
             name: demo-01
-            namespace: flux-system
+            namespace: default
     - name: prod
       targets:
         - namespace: podinfo-02-prod
