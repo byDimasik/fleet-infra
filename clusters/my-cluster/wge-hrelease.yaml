@@ -54,7 +54,7 @@ spec:
       hosts:
       - host: ""
         paths:
-        - path: /ww
+        - path: /
           pathType: Prefix
     tls:
       enabled: false
