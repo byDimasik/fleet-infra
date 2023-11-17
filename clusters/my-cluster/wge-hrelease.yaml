@@ -33,7 +33,7 @@ spec:
         clientCredentialsSecret: oidc-auth
         enabled: true
         issuerURL: https://dev-43978658.okta.com
-        redirectURL: https://ww.47gw8o-mke-lb-dbc2fb6379dbdc82.elb.us-east-2.amazonaws.com/oauth2/callback
+        redirectURL: https://ww.ec2-18-225-31-150.us-east-2.compute.amazonaws.com/oauth2/callback
     enablePipelines: true
     gitopssets-controller:
       controllerManager:
@@ -47,11 +47,11 @@ spec:
     global: {}
     ingress:
       annotations:
-        external-dns.alpha.kubernetes.io/hostname: ww.47gw8o-mke-lb-dbc2fb6379dbdc82.elb.us-east-2.amazonaws.com
+        external-dns.alpha.kubernetes.io/hostname: ww.ec2-18-225-31-150.us-east-2.compute.amazonaws.com
       className: public-nginx
       enabled: true
       hosts:
-      - host: ww.47gw8o-mke-lb-dbc2fb6379dbdc82.elb.us-east-2.amazonaws.com
+      - host: ww.ec2-18-225-31-150.us-east-2.compute.amazonaws.com
         paths:
         - path: /
           pathType: ImplementationSpecific
