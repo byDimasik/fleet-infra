@@ -46,7 +46,7 @@ spec:
       enabled: true
     global: {}
     service:
-      port: 32768
+      port: 33002
     additionalArgs:
       - --route-prefix=/ww
     ingress:
