@@ -53,7 +53,7 @@ spec:
       hosts:
       - host: 18.236.84.90
         paths:
-        - path: /
+        - path: /ww
           pathType: ImplementationSpecific
     tls:
       enabled: false
