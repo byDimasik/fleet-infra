@@ -45,16 +45,15 @@ spec:
           - --enabled-generators=GitRepository,Cluster,PullRequests,List,APIClient,Matrix,Config
       enabled: true
     global: {}
+    additionalArgs:
+      - --route-prefix=/ww
     ingress:
-      annotations:
-        external-dns.alpha.kubernetes.io/hostname: 18.236.84.90
-      className: public-nginx
       enabled: true
       hosts:
-      - host: 18.236.84.90
+      - host: ""
         paths:
         - path: /ww
-          pathType: ImplementationSpecific
+          pathType: Prefix
     tls:
       enabled: false
 status: {}
