@@ -45,6 +45,8 @@ spec:
           - --enabled-generators=GitRepository,Cluster,PullRequests,List,APIClient,Matrix,Config
       enabled: true
     global: {}
+    service:
+      port: 32768
     additionalArgs:
       - --route-prefix=/ww
     ingress:
