@@ -28,12 +28,7 @@ spec:
             tag: v1.5.2
       enabled: true
       fullnameOverride: cluster
-    config:
-      oidc:
-        clientCredentialsSecret: oidc-auth
-        enabled: true
-        issuerURL: https://dev-43978658.okta.com
-        redirectURL: https://18.236.84.90/oauth2/callback
+    config: {}
     enablePipelines: true
     gitopssets-controller:
       controllerManager:
@@ -45,17 +40,16 @@ spec:
           - --enabled-generators=GitRepository,Cluster,PullRequests,List,APIClient,Matrix,Config
       enabled: true
     global: {}
-    service:
-      port: 33002
-    additionalArgs:
-      - --route-prefix=/ww
     ingress:
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: 18.236.84.90
+      className: public-nginx
       enabled: true
       hosts:
-      - host: ""
+      - host: 18.236.84.90
         paths:
-        - path: /ww
-          pathType: Prefix
+        - path: /
+          pathType: ImplementationSpecific
     tls:
       enabled: false
 status: {}
