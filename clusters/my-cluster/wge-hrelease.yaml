@@ -20,6 +20,15 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    monitoring:
+      enabled: true # enable it if you want to expose a monitoring server
+      service:
+        name: monitoring
+        port: 9090 # port to expose the monitoring server
+      metrics:
+        enabled: true # enable it to expose a prometheus metrics endpoint in `/metrics`
+      profiling:
+        enabled: true # enable it to expose a pprof debug endpoint  `/debug/pprof`
     extraEnvVars:
       - name: WEAVE_GITOPS_FEATURE_OIDC_BUTTON_LABEL
         value: "Login with Okta"
