@@ -33,7 +33,7 @@ spec:
         clientCredentialsSecret: oidc-auth
         enabled: true
         issuerURL: https://dev-43978658.okta.com
-        redirectURL: https://18.236.84.90/oauth2/callback
+        redirectURL: https://18.236.84.90:33001/oauth2/callback
     enablePipelines: true
     gitopssets-controller:
       controllerManager:
